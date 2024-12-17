@@ -6,11 +6,11 @@
 }
 
 :root {
-  --color-bg: rgba(103, 157, 157, 0.587);
+  --color-bg: rgba(255, 42, 42, 0.587);
   --color-fg: #fff;
 
-  --font-body: sans-serif;
-  --font-header: 'KerakNeraka', sans-serif;
+  --font-body: "Ubuntu", serif;
+  --font-header: "Bellefair", serif;
 
   --step--2: clamp(0.6331rem, 0.6141rem + 0.0949vw, 0.6877rem);
   --step--1: clamp(0.844rem, 0.7993rem + 0.2234vw, 0.9724rem);
@@ -33,6 +33,9 @@ body {
     place-items: center;
     background-color: var(--color-bg);
     z-index: -1;
+    background-image: url("/ornaments-1885470_1280.png");
+    background-repeat: no-repeat;
+    background-size: 25rem;
 }
 
 main {
@@ -47,6 +50,7 @@ h1 {
     color: var(--color-fg);
     font-family: var(--font-header);
     letter-spacing: .1em;
+    color: #493912;
 }
 
 p {
@@ -60,4 +64,48 @@ canvas {
     top: 0;
     left: 0;
     z-index: 0;
+}
+
+body img {
+    width: 12rem;
+    display: flex;
+    justify-self: right;
+}
+
+@media only screen and (max-width: 1000px) {
+    body img {
+        display: none;
+    }
+}
+
+/* @media only screen and (max-width: 1000px) {
+    body {
+        background-image: none;
+    }
+} */
+
+p.desc {
+    font-size: 1rem;
+}
+
+p {
+    color: #493912
+}
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ffe4a0, 0 0 40px #ffe4a0, 0 0 50px #ffe4a0, 0 0 60px #ffed9b, 0 0 70px #fcca7a, 0 0 80px #ffaa33;
+    }
 }
