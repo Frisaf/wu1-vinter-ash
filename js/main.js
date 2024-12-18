@@ -61,15 +61,18 @@ const getQueryParams = () => {
   const params = new URLSearchParams(window.location.search);
   const title = params.get('title');
   const message = params.get('message');
-  return { title, message };
+  const style = params.get('style')
+  return { title, message, style };
 };
 
-const { title, message } = getQueryParams();
-console.log(`Title: ${title}, Message: ${message}`);
+const { title, message, style } = getQueryParams();
+console.log(`Title: ${title}, Message: ${message}, Style: ${style}`);
 
-if (title || message) {
+if (title || message || style) {
   const titleElement = document.querySelector("#title");
   if (titleElement) titleElement.textContent = title;
   const messageElement = document.querySelector("#message");
   if (messageElement) messageElement.textContent = message;
+  const styleElement = document.querySelector("#style");
+  if (styleElement) styleElement.classList.add(style)
 }
