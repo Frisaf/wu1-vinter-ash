@@ -33,7 +33,7 @@ body {
     place-items: center;
     background-color: var(--color-bg);
     z-index: -1;
-    background-image: url("/ornaments-1885470_1280.png");
+    background-image: url("../ornaments-1885470_1280.png");
     background-repeat: no-repeat;
     background-size: 25rem;
 }
